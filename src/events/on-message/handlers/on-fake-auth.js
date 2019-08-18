@@ -9,7 +9,10 @@ export function onFakeAuthHandler(payload) {
     )
     const data = JSON.stringify({
         type,
-        payload: {id: newUserId}
+        payload: {
+            id: newUserId,
+            name
+        }
     })
     webSocket.send(data)
 }
