@@ -6,6 +6,8 @@ let webSocketServer = new WebSocketServer.Server({
   port: 8081
 });
 
+global.clients = webSocketServer.clients;
+
 console.log("start listening");
 
 webSocketServer.on('connection', function(ws) {

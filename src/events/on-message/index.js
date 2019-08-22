@@ -1,9 +1,7 @@
 import {MESSAGE_HANDLE_TYPES} from "./on-message-handle-types"
-import {onFakeAuthHandler} from "./handlers/on-fake-auth"
 import {onNewChatMessage} from "./handlers/on-new-message"
 
 const actionHandlerConfig = {
-    [MESSAGE_HANDLE_TYPES.auth]: onFakeAuthHandler,
     [MESSAGE_HANDLE_TYPES.chatMessage]: onNewChatMessage,
 }
 
