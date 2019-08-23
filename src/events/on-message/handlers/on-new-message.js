@@ -3,11 +3,10 @@ const WebSocket = require('ws');
 
 export function onNewChatMessage(payload){    
     const {webSocket, type} = this;
-    const {messageText, userId, userName} = payload;
+    const {messageText, userName} = payload;
 
     const message = {
         messageText, 
-        userId, 
         userName,
         messageId: uuidv4()
     }
