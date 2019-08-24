@@ -5,11 +5,12 @@ const path = require('path');
 import {onMessageHandler} from "./events/on-message"
 
 const PORT = process.env.PORT || 8081;
-const INDEX = path.join(__dirname, './index.html');
+const INDEX = path.join(__dirname, '/index.html');
 
 const server = express()
   .use((req, res) => res.sendFile(INDEX) )
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 
 let webSocketServer = new WebSocketServer.Server({
   server
@@ -17,7 +18,7 @@ let webSocketServer = new WebSocketServer.Server({
 
 global.clients = webSocketServer.clients;
 
-console.log("start listening", PORT);
+console.log("start listening", PORT, INDEX);
 
 webSocketServer.on('connection', function(ws) {
   console.log("login")
