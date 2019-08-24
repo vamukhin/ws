@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r esm src"
+    "start": "npm i && node -r esm src"
   },
   "repository": {
     "type": "git",
