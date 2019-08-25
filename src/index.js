@@ -18,8 +18,6 @@ let webSocketServer = new WebSocketServer.Server({
 
 global.clients = webSocketServer.clients;
 
-console.log("start listening", PORT, INDEX);
-
 webSocketServer.on('connection', function(ws) {
   console.log("login")
   ws.on('message', onMessageHandler);
